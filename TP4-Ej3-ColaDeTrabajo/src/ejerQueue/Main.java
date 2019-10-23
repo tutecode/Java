@@ -4,13 +4,13 @@ package ejerQueue;
 /*
 Cree la clase ColaDeTrabajo que permita encolar diversos trabajos. 
 O sea, los trabajos a encolar deben implementar la interfaz Trabajo.
-Defina en la clase ColaDeTrabajo un método sacar() que retorna el próximo trabajo a procesar. 
-Además, agregue en dicha clase los atributos nombre y lista que representan el nombre de la cola y 
+Defina en la clase ColaDeTrabajo un mÃ©todo sacar() que retorna el prÃ³ximo trabajo a procesar. 
+AdemÃ¡s, agregue en dicha clase los atributos nombre y lista que representan el nombre de la cola y 
 si esta lista o no para retornar trabajos. Tenga presente, que cuando no existan trabajos en la cola o
-cuando la misma no esté lista se debe lanzar las siguientes excepciones:
+cuando la misma no estÃ© lista se debe lanzar las siguientes excepciones:
 NoListaException y SinTrabajoEnColaException
 
-A continuación, se detalla cada una de las excepciones lanzadas por el método sacar()de ColaDeTrabajo
+A continuaciÃ³n, se detalla cada una de las excepciones lanzadas por el mÃ©todo sacar()de ColaDeTrabajo
 
 public class NoListaException extends Exception {
 private String nombre;
@@ -21,7 +21,7 @@ cantidadTrabajos = s;
 }
 @Override
 public String getMessage() {
-return "La Cola de Trabajo: " + nombre + " no está
+return "La Cola de Trabajo: " + nombre + " no estÃ¡
 disponible. Cantidad de trabajos a procesar : " +
 cantidadTrabajos;
 }
@@ -39,9 +39,9 @@ procesar. ";
 }
 
 Se pide:
-a) Implementar la clase ColaDeTrabajo y definir el método sacar() en dicha clase.
-b) ¿Cómo se lanzan las excepciones anteriores dentro del método?
-c) ¿Cómo se captura las excepciones al llamar al método sacar()?
+a) Implementar la clase ColaDeTrabajo y definir el mÃ©todo sacar() en dicha clase.
+b) Â¿CÃ³mo se lanzan las excepciones anteriores dentro del mÃ©todo?
+c) Â¿CÃ³mo se captura las excepciones al llamar al mÃ©todo sacar()?
 
  */
 
@@ -60,6 +60,12 @@ public class Main {
 		
 		try {
 			ct.sacar();
+		
+		/*
+		 * catch(NoListaException / SinTrabajoEnColaException e){
+		 * 		System.out.println(e.getMessage);
+		 * }
+		 */
 		} catch (NoListaException e) {
 			e.getMessage();
 		} catch (SinTrabajoEnColaException e) {
